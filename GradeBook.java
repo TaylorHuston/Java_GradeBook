@@ -17,8 +17,17 @@ public class GradeBook {
         this.courseName = courseName;
         grades = new int[numStudents][numGrades];
     }
+    
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+    
+    public String getCourseName() {
+        return this.courseName;
+    }
 
     public void showGrades() {
+        System.out.println("Course: " + this.courseName);
         for (int i = 0; i < grades.length; i++) {  //For loop for each student
             System.out.printf("Grades for student %d ", i+1);
             for (int grade : grades[i]) {  //For loop on each inner array of grades
